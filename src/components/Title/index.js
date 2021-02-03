@@ -1,7 +1,7 @@
 import React from "react";
 
 function Title() {
-  return <p>Hello World!</p>;
+  return <h1>Job Draft</h1>;
 }
 
 export default Title;
