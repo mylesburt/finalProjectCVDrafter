@@ -1,9 +1,9 @@
 import React from "react";
 
-function SmallText() {
+function SmallText(props) {
   return (
     <div>
-      <h5>Insert Prop</h5>
+      <h5>{props.smallText}</h5>
     </div>
   );
 }

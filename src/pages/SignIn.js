@@ -11,11 +11,11 @@ function SignIn() {
     <div className="app">
       <div className="">
         <Title />
-        <Subheading />
-        <Inputbox />
-        <Inputbox />
-        <Button />
-        <SmallText />
+        <Subheading subHeadText="The best cover letter drafting web application" />
+        <Inputbox placeholderText="First Name" />
+        <Inputbox placeholderText="Last Name" />
+        <Button buttontext="Log In" />
+        <SmallText smallText="Sign Up" />
       </div>
     </div>
   );
