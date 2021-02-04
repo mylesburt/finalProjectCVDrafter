@@ -1,19 +1,19 @@
 import React from "react";
-import Title from "./components/Title/index";
-import Subtitle from "./components/Subtitle/index";
-// import LoginUser from "./components/LoginUser/index";
-// import LoginPassword from "./components/LoginPassword";
-// import
-import "./styles.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <div className="app">
+    <Router>
       <div>
-        <Title />
-        <Subtitle />
+        <Route exact path="/" component={SignIn} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/dashboard" component={Dashboard} />
       </div>
-    </div>
+    </Router>
   );
 }
 
