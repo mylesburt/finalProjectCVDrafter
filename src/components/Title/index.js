@@ -1,7 +1,11 @@
 import React from "react";
 
-function Title() {
-  return <h1>Job Draft</h1>;
+function Title(props) {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+    </div>
+  );
 }
 
 export default Title;
