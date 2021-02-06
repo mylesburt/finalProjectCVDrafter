@@ -10,15 +10,23 @@ import { Link } from "react-router-dom";
 function SignIn() {
   return (
     <div className="app">
-      <div className="">
+      <div className="bg-white shadow-md rounded px-8 py-8 pt-8">
         <Title title="Job Drafter" />
         <Subheading subHeadText="The best cover letter drafting web application" />
-        <Inputbox placeholderText="Email" />
-        <Inputbox placeholderText="Password" />
-        <Button buttontext="Log In" />
-        <Link to="/signup">
-          <SmallText smallText="Sign Up" />
-        </Link>
+        <div className="px-4 pb-4">
+          <SmallText smallText="Email" />
+          <Inputbox placeholderText="john.smith@gmail.com" />
+        </div>
+        <div className="px-4 pb-4">
+          <SmallText smallText="Password" />
+          <Inputbox placeholderText="Enter password here" />
+        </div>
+        <div className="px-4 pb-4">
+          <Button buttontext="Log In" />
+          <Link to="/signup">
+            <SmallText smallText="Sign Up" />
+          </Link>
+        </div>
       </div>
     </div>
   );
