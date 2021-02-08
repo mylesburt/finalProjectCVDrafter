@@ -1,27 +1,26 @@
 const faker = require("faker");
-const Comment = require("./../../models/Comment");
-const Post = require("./../../models/Post");
+const Paragraph = require("./../../models/Paragraph");
 const User = require("../../models/User");
 const getRandomModel = require("./helper/getRandomModel");
 
 async function seedData() {
   // delete everything inside db
-  Comment.collection.deleteMany();
+  Paragraph.collection.deleteMany();
 
   // for loop to generate X amount of records in my db
 
-  console.log("creating comment");
+  console.log("creating paragragh");
   for (let index = 0; index < 30; index++) {
     const randomUser = await getRandomModel("User");
-    const randomPost = await getRandomModel("Post");
 
-    const comment = new Comment({
+    const paragragh = new Paragraph({
       body: faker.lorem.paragraph(),
-      user_id: randomUser._id,
-      post_id: randomPost._id,
+      userID: randomUser._id,
+      name: faker.lorem.words(2),
+      tags: [faker.lorem.words()],
     });
 
-    comment.save();
+    paragragh.save();
   }
 }
 

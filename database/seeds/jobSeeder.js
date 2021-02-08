@@ -15,8 +15,10 @@ async function seedData() {
 
     const job = new Job({
       title: faker.lorem.sentence(),
-      body: faker.lorem.paragraph(),
-      user_id: randomUser._id,
+      company: faker.company.companyName(),
+      userID: randomUser._id,
+      dueDate: new Date(),
+      jobLink: faker.internet.url(),
     });
 
     job.save();

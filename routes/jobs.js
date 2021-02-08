@@ -1,10 +1,17 @@
 const express = require("express");
 const router = express.Router();
+const Job = require("../models/Job");
 
 // RESTFUL -- framework
 // get (read)
 router.get("/jobs", (req, res) => {
-  // ..
+  Job.find({})
+    .then((jobs) => {
+      res.json(jobs);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 });
 
 // get a specific item
