@@ -1,5 +1,6 @@
 import Axios from "axios";
 import React from "react";
+import DashboardBody from "../components/DashboardBody";
 import JobsHeader from "../components/JobsHeader";
 import Navbar from "../components/Navbar";
 import "../styles.css";
@@ -15,14 +16,20 @@ function Dashboard() {
   });
   return (
     <div className="container mx-auto">
-      <Navbar
-        navHeader="CV Draft (replace with prop logo)"
-        navUserId="*prop in user first and last name*"
-      />
-      <div className="container mx-auto">
-        <JobsHeader />
-        {/* <Body />
-        <ParagraphBar /> */}
+      <div className="grid-rows-1">
+        <div className="grid grid-cols-12">
+          <div className="col-span-full">
+            <Navbar
+              navHeader="CV Draft (replace with prop logo)"
+              navUserId="*prop in user first and last name*"
+            />
+          </div>
+        </div>
+        <div className="grid-rows-1">
+          <div className="grid grid-cols-12">
+            <DashboardBody />
+          </div>
+        </div>
       </div>
     </div>
   );
