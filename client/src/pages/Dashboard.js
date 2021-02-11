@@ -1,7 +1,7 @@
 import Axios from "axios";
 import React from "react";
 import DashboardBody from "../components/DashboardBody";
-import JobsHeader from "../components/JobsHeader";
+import JobListBody from "../components/JobListBody";
 import Navbar from "../components/Navbar";
 import "../styles.css";
 
@@ -28,6 +28,7 @@ function Dashboard() {
         <div className="grid-rows-1">
           <div className="grid grid-cols-12">
             <DashboardBody />
+            <JobListBody />
           </div>
         </div>
       </div>
