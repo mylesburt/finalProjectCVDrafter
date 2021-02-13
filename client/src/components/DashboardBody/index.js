@@ -24,13 +24,21 @@ class DashboardBody extends Component {
     event.preventDefault();
     console.log(this.state);
     axios
-      .post("/dashboard", this.state)
+      .post("/api/jobs", this.state)
       .then((res) => {
+        this.loadJobs();
         console.log(res);
       })
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  loadJobs = () => {
+    axios
+      .get("/api/jobs")
+      .then((res) => this.props.setJobs(res.data))
+      .catch((err) => console.log(err));
   };
 
   render() {

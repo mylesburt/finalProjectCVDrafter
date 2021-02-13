@@ -8,7 +8,7 @@ const jobSchema = new Schema(
     title: { type: String, required: true },
     company: { type: String, required: true },
     dueDate: {
-      type: Date,
+      type: String,
       required: true,
       unique: false,
     },

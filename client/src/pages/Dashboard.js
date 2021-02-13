@@ -9,11 +9,11 @@ console.log("Hello Dashboard");
 
 function Dashboard() {
   const [jobs, setJobs] = React.useState([]);
-  Axios({
-    url: "/api/jobs",
-  }).then((res) => {
-    setJobs(res.data);
-  });
+  // Axios({
+  //   url: "/api/jobs",
+  // }).then((res) => {
+  //   setJobs(res.data);
+  // });
   return (
     <div className="container mx-auto">
       <div className="grid-rows-1">
@@ -27,8 +27,8 @@ function Dashboard() {
         </div>
         <div className="grid-rows-1">
           <div className="grid grid-cols-12">
-            <DashboardBody />
-            <JobListBody />
+            <DashboardBody jobs={jobs} setJobs={setJobs} />
+            <JobListBody jobs={jobs} setJobs={setJobs} />
           </div>
         </div>
       </div>
